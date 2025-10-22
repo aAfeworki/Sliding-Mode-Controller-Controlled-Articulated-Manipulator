@@ -1,0 +1,69 @@
+[System]
+Name='Link1'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=25
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Error1'
+Range=[-1 1]
+NumMFs=5
+MF1='mf1':'trimf',[-1 -0.5 -0.25]
+MF2='mf2':'trimf',[-0.5 -0.25 0]
+MF3='mf3':'trimf',[-0.1 0 0.1]
+MF4='mf4':'trimf',[0 0.25 0.5]
+MF5='mf5':'trimf',[0.25 0.5 1]
+
+[Input2]
+Name='verror1'
+Range=[-5 5]
+NumMFs=5
+MF1='mf1':'trimf',[-5 -4 -2]
+MF2='mf2':'trimf',[-3 -2 0]
+MF3='mf3':'trimf',[-0.5 0 0.5]
+MF4='mf4':'trimf',[0 2 3]
+MF5='mf5':'trimf',[2 4 5]
+
+[Output1]
+Name='Torque1'
+Range=[-10 10]
+NumMFs=5
+MF1='mf1':'trimf',[-10 -7 -4]
+MF2='mf2':'trimf',[-6 -3 0]
+MF3='mf3':'trimf',[-1 0 1]
+MF4='mf4':'trimf',[0 3 6]
+MF5='mf5':'trimf',[4 7 10]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 1 (1) : 1
+1 3, 2 (1) : 1
+1 4, 3 (1) : 1
+1 5, 3 (1) : 1
+2 1, 1 (1) : 1
+2 2, 2 (1) : 1
+2 3, 3 (1) : 1
+2 4, 4 (1) : 1
+2 5, 4 (1) : 1
+3 1, 2 (1) : 1
+3 2, 3 (1) : 1
+3 3, 3 (1) : 1
+3 4, 3 (1) : 1
+3 5, 4 (1) : 1
+4 1, 3 (1) : 1
+4 2, 4 (1) : 1
+4 3, 3 (1) : 1
+4 4, 4 (1) : 1
+4 5, 5 (1) : 1
+5 1, 3 (1) : 1
+5 2, 4 (1) : 1
+5 3, 4 (1) : 1
+5 4, 5 (1) : 1
+5 5, 5 (1) : 1
